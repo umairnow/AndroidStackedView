@@ -1,0 +1,125 @@
+<com.example.androidstackedview.views.StackedView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stackedView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#036892" >
+
+    <LinearLayout
+        android:id="@+id/dashboard"
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#FF0000"
+        android:tag="dashboard" >
+
+        <RelativeLayout
+            android:id="@+id/topics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FF00">
+
+            <ImageView
+                android:id="@+id/testimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/topics" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/testimg"
+                android:text="Topics"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/next" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="#00FF00" >
+
+            <ImageView
+                android:id="@+id/testimg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/tools" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/testimg1"
+                android:text="Tools"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/next" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.example.androidstackedview.views.TopicsView
+        android:id="@+id/topics_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#007700"
+        android:tag="topics"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:id="@+id/fr1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </FrameLayout>
+    </com.example.androidstackedview.views.TopicsView>
+
+    <com.example.androidstackedview.views.SubTopicsView
+        android:id="@+id/subtopics_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="subtopics"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:id="@+id/fr2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </FrameLayout>
+    </com.example.androidstackedview.views.SubTopicsView>
+
+    <com.example.androidstackedview.views.DetailsView
+        android:id="@+id/details_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="details"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:id="@+id/fr3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </FrameLayout>
+    </com.example.androidstackedview.views.DetailsView>
+
+</com.example.androidstackedview.views.StackedView>
